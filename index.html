@@ -1,145 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>BeatMaker</title>
 
-<link rel="stylesheet" href="assets/css/animate.css">
-<link rel="stylesheet" href="assets/css/bootstrap.min.css">
-<link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/main.css">
 
 </head>
+
 <body>
-   <div class="outer"><div class="middle">
+    <div class="outer">
+        <div class="middle">
 
-    <div class="inner">
-    <div class="col-xs-12 col-md-12 ">
+            <div class="inner">
+                <div class="col-xs-12 col-md-12 ">
 
-         <div class="col-xs-12 col-sm-6 col-sm-offset-6 col-md-2 col-md-offset-8 ">
+                    <div class="col-xs-12 col-sm-6 col-sm-offset-6 col-md-2 col-md-offset-8">
+                        <label for="tempo">Tempo</label>
+                        <input type="number" class="form-control tempo text-center" value="120">
+                        <br>
+                    </div>
 
-           <label for="tempo">Tempo</label>
-            <input type="number" class="form-control tempo text-center" value="120">
-           <br>
+                    <div class="col-xs-12 col-sm-6 col-sm-offset-6 col-md-2 col-md-offset-8">
+                        <label for="tempo">Drum Kit</label>
+                        <select class="form-control kit btn-block">
+                            <option value="" class="hidden">Select Drum Kit</option>
+                            <option value="default">Default</option>
+                            <option value="trap">Trap</option>
+                            <option value="african">African Kit</option>
+                        </select>
+                        <br>
+                    </div>
+
+                    <div class="col-xs-12 col-sm-6 col-sm-offset-6 col-md-2 col-md-offset-8">
+                        <button class="btn btn-success btn-lg btn-block playbtn">Play</button>
+                    </div>
+                    <div class="clearfix"></div>
+
+                    <div class="kick" data-sound="kick">
+                        <h3>Drums</h3>
+                        <button class="btn switch c1" id="kick-1"></button>
+                        <button class="btn switch c2" id="kick-2"></button>
+                        <button class="btn switch c3" id="kick-3"></button>
+                        <button class="btn switch c4" id="kick-4"></button>
+                        <button class="btn switch c5" id="kick-5"></button>
+                        <button class="btn switch c6" id="kick-6"></button>
+                        <button class="btn switch c7" id="kick-7"></button>
+                        <button class="btn switch c8" id="kick-8"></button>
+                        <button class="btn switch c9" id="kick-9"></button>
+                        <button class="btn switch c10" id="kick-10"></button>
+                        <button class="btn switch c11" id="kick-11"></button>
+                        <button class="btn switch c12" id="kick-12"></button>
+                        <button class="btn switch c13" id="kick-13"></button>
+                        <button class="btn switch c14" id="kick-14"></button>
+                        <button class="btn switch c15" id="kick-15"></button>
+                        <button class="btn switch c16" id="kick-16"></button>
+                    </div>
+
+                    <div class="hat" data-sound="hat">
+                        <h3>Hat</h3>
+                        <button class="btn switch c1" id="hat-1"></button>
+                        <button class="btn switch c2" id="hat-2"></button>
+                        <button class="btn switch c3" id="hat-3"></button>
+                        <button class="btn switch c4" id="hat-4"></button>
+                        <button class="btn switch c5" id="hat-5"></button>
+                        <button class="btn switch c6" id="hat-6"></button>
+                        <button class="btn switch c7" id="hat-7"></button>
+                        <button class="btn switch c8" id="hat-8"></button>
+                        <button class="btn switch c9" id="hat-9"></button>
+                        <button class="btn switch c10" id="hat-10"></button>
+                        <button class="btn switch c11" id="hat-11"></button>
+                        <button class="btn switch c12" id="hat-12"></button>
+                        <button class="btn switch c13" id="hat-13"></button>
+                        <button class="btn switch c14" id="hat-14"></button>
+                        <button class="btn switch c15" id="hat-15"></button>
+                        <button class="btn switch c16" id="hat-16"></button>
+                    </div>
+
+                    <div class="snare" data-sound="snare">
+                        <h3>Snare</h3>
+                        <button class="btn switch c1" id="snare-1"></button>
+                        <button class="btn switch c2" id="snare-2"></button>
+                        <button class="btn switch c3" id="snare-3"></button>
+                        <button class="btn switch c4" id="snare-4"></button>
+                        <button class="btn switch c5" id="snare-5"></button>
+                        <button class="btn switch c6" id="snare-6"></button>
+                        <button class="btn switch c7" id="snare-7"></button>
+                        <button class="btn switch c8" id="snare-8"></button>
+                        <button class="btn switch c9" id="snare-9"></button>
+                        <button class="btn switch c10" id="snare-10"></button>
+                        <button class="btn switch c11" id="snare-11"></button>
+                        <button class="btn switch c12" id="snare-12"></button>
+                        <button class="btn switch c13" id="snare-13"></button>
+                        <button class="btn switch c14" id="snare-14"></button>
+                        <button class="btn switch c15" id="snare-15"></button>
+                        <button class="btn switch c16" id="snare-16"></button>
+                    </div>
+
+                    <div class="perc" data-sound="perc">
+                        <h3>Perc</h3>
+                        <button class="btn switch c1" id="perc-1"></button>
+                        <button class="btn switch c2" id="perc-2"></button>
+                        <button class="btn switch c3" id="perc-3"></button>
+                        <button class="btn switch c4" id="perc-4"></button>
+                        <button class="btn switch c5" id="perc-5"></button>
+                        <button class="btn switch c6" id="perc-6"></button>
+                        <button class="btn switch c7" id="perc-7"></button>
+                        <button class="btn switch c8" id="perc-8"></button>
+                        <button class="btn switch c9" id="perc-9"></button>
+                        <button class="btn switch c10" id="perc-10"></button>
+                        <button class="btn switch c11" id="perc-11"></button>
+                        <button class="btn switch c12" id="perc-12"></button>
+                        <button class="btn switch c13" id="perc-13"></button>
+                        <button class="btn switch c14" id="perc-14"></button>
+                        <button class="btn switch c15" id="perc-15"></button>
+                        <button class="btn switch c16" id="perc-16"></button>
+                    </div>
+                </div>
+            </div>
         </div>
+    </div>
 
-          <div class="col-xs-12 col-sm-6 col-sm-offset-6 col-md-2 col-md-offset-8 ">
-             <label for="tempo">Drum Kit</label>
-            <select class="form-control kit btn-block">
-            <option value="" class="hidden">Select Drum Kit</option>
-            <option value="0">default</option>
-            <option value="1">Trap</option>
-            <option value="2">African Kit</option>
-           </select>
-           <br>
-        </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
 
-    <div class="col-xs-12 col-sm-6 col-sm-offset-6 col-md-2 col-md-offset-8 ">
-<button class="btn btn-success btn-lg btn-block playbtn">Play</button>
-        </div>
-        <div class="clearfix"></div>
-<div class="kick">
-            <h3>Drums</h3>
-      <div class="col-xs-12 col-sm-12 col-md-12 ">
-        <button class="btn a not-selected button11" data-val='off' data-number = "1" data-sound = 'kick'></button>
-        <button  class="btn b not-selected button21 " data-val='off' data-number = "2" data-sound = 'kick'></button>
-        <button class="btn c not-selected button31 "  data-val='off' data-number = "3" data-sound = 'kick'></button>
-        <button class="btn d  not-selected button41 " data-val='off' data-number = "4" data-sound = 'kick' ></button>
-
-
-
-        <button class="btn a not-selected button51 " data-val='off' data-number = "5" data-sound = 'kick'></button>
-        <button  class="btn b not-selected button61" data-val='off' data-number = "6" data-sound = 'kick'></button>
-        <button class="btn c not-selected button71 " data-val='off' data-number = "7" data-sound = 'kick'></button>
-        <button class="btn d  not-selected button81 " data-val='off' data-number = "8" data-sound = 'kick'></button>
-
-
-
-        <button class="btn a not-selected button91 " data-val='off' data-number = "9" data-sound = 'kick'></button>
-        <button  class="btn b not-selected button101" data-val='off' data-number = "10" data-sound = 'kick'></button>
-        <button class="btn c not-selected button111" data-val='off' data-number = "11" data-sound = 'kick'></button>
-        <button class="btn d  not-selected button121" data-val='off' data-number = "12" data-sound = 'kick' ></button>
-
-
-        <button class="btn a not-selected button131" data-val='off' data-number = "13" data-sound = 'kick'></button>
-        <button  class="btn b not-selected button141" data-val='off' data-number = "14" data-sound = 'kick'></button>
-        <button class="btn c not-selected button151" data-val='off' data-number = "15" data-sound = 'kick'></button>
-        <button class="btn d  not-selected button161 " data-val='off' data-number = "16" data-sound = 'kick'></button>
-
-</div>
-
- <div class="hat">
-            <h3>Hat</h3>
-        <button class="btn a not-selected button12" data-val='off' data-number = "1" data-sound = 'hat'></button>
-        <button  class="btn b not-selected button22" data-val='off' data-number = "2" data-sound = 'hat'></button>
-        <button class="btn c not-selected button32" data-val='off' data-number = "3" data-sound = 'hat'></button>
-        <button class="btn d  not-selected button42" data-val='off' data-number = "4" data-sound = 'hat' ></button>
-        <button class="btn a not-selected button52 " data-val='off'  data-number = "5" data-sound = 'hat'></button>
-        <button  class="btn b not-selected button62" data-val='off' data-number = "6" data-sound = 'hat'></button>
-        <button class="btn c not-selected button72" data-val='off' data-number = "7" data-sound = 'hat'></button>
-        <button class="btn d  not-selected button82" data-val='off' data-number = "8" data-sound = 'hat' ></button>
-         <button class="btn a not-selected button92" data-val='off'  data-number = "9" data-sound = 'hat'></button>
-        <button  class="btn b not-selected button102 "  data-val='off' data-number = "10" data-sound = 'hat'></button>
-        <button class="btn c not-selected button112 " data-val='off' data-number = "11" data-sound = 'hat'></button>
-        <button class="btn d  not-selected button122 " data-val='off' data-number = "12" data-sound = 'hat' ></button>
-        <button class="btn a not-selected button132" data-val='off' data-number = "13" data-sound = 'hat'></button>
-        <button  class="btn b not-selected button142" data-val='off' data-number = "14" data-sound = 'hat'></button>
-        <button class="btn c not-selected button152" data-val='off' data-number = "15" data-sound = 'hat'></button>
-        <button class="btn d  not-selected button162" data-val='off' data-number = "16" data-sound = 'hat'></button>
-
-
-
-</div>
-
- <div class="snare">
-            <h3>Snare</h3>
-        <button class="btn a not-selected button13" data-val='off' data-number = "1" data-sound = 'snare'></button>
-        <button  class="btn b not-selected button23" data-val='off' data-number = "2"  data-sound = 'snare'></button>
-        <button class="btn c not-selected button33" data-val='off' data-number = "3"  data-sound = 'snare'></button>
-        <button class="btn d  not-selected button43" data-val='off' data-number = "4"  data-sound = 'snare' ></button>
-        <button class="btn a not-selected button53" data-val='off' data-number = "5"  data-sound = 'snare'></button>
-        <button  class="btn b not-selected button63 "  data-val='off' data-number = "6"  data-sound = 'snare'></button>
-        <button class="btn c not-selected button73" data-val='off' data-number = "7"  data-sound = 'snare'></button>
-        <button class="btn d  not-selected button83" data-val='off' data-number = "8"  data-sound = 'snare' ></button>
-         <button class="btn a not-selected button93" data-val='off' data-number = "9"  data-sound = 'snare'></button>
-        <button  class="btn b not-selected button103" data-val='off' data-number = "10"  data-sound = 'snare'></button>
-        <button class="btn c not-selected button113" data-val='off' data-number = "11"  data-sound = 'snare'></button>
-        <button class="btn d  not-selected button123 " data-val='off' data-number = "12"  data-sound = 'snare' ></button>
-        <button class="btn a not-selected button133" data-val='off' data-number = "13"  data-sound = 'snare'></button>
-        <button  class="btn b not-selected button143" data-val='off' data-number = "14"  data-sound = 'snare'></button>
-        <button class="btn c not-selected button153" data-val='off' data-number = "15"  data-sound = 'snare'></button>
-        <button class="btn d  not-selected button163 " data-val='off' data-number = "16"  data-sound = 'snare'></button>
-
-
-</div>
-
- <div class="perc">
-         <h3>Perc</h3>
-        <button class="btn a not-selected button14" data-val='off' data-number = "1"  data-sound = 'perc'></button>
-        <button  class="btn b not-selected button24" data-val='off' data-number = "2" data-sound = 'perc'></button>
-        <button class="btn c not-selected button34"  data-val='off' data-number = "3" data-sound = 'perc'></button>
-        <button class="btn d  not-selected button44" data-val='off' data-number = "4" data-sound = 'perc'></button>
-        <button class="btn a not-selected button54" data-val='off' data-number = "5" data-sound = 'perc'></button>
-        <button  class="btn b not-selected button64" data-val='off' data-number = "6" data-sound = 'perc'></button>
-        <button class="btn c not-selected button74 " data-val='off' data-number = "7" data-sound = 'perc'></button>
-        <button class="btn d  not-selected button84" data-val='off' data-number = "8" data-sound = 'perc' ></button>
-         <button class="btn a not-selected button94" data-val='off' data-number = "9" data-sound = 'perc'></button>
-        <button  class="btn b not-selected button104" data-val='off' data-number = "10" data-sound = 'perc'></button>
-        <button class="btn c not-selected button114" data-val='off' data-number = "11" data-sound = 'perc'></button>
-        <button class="btn d  not-selected button124" data-val='off' data-number = "12" data-sound = 'perc'></button>
-        <button class="btn a not-selected button134" data-val='off' data-number = "13" data-sound = 'perc'></button>
-        <button  class="btn b not-selected button144" data-val='off' data-number = "14" data-sound = 'perc'></button>
-        <button class="btn c not-selected button154" data-val='off' data-number = "15" data-sound = 'perc'></button>
-        <button class="btn d  not-selected button164" data-val='off' data-number = "16" data-sound = 'perc'></button>
-
-
-</div>
-
-       </div> </div></div></div>
-
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/bootstrap.min.js"></script>
-
-<script src="assets/js/main.js"></script>
+    <script src="assets/js/data/_kit.js"></script>
+    <script src="assets/js/main.js"></script>
 </body>
 
 </html>

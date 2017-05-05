@@ -1,65 +1,62 @@
-
-html,body{
-            height: 100%;
-            width: 100%;
-            margin: 0;
-            padding: 0;
+html,
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
     background: black;
 }
 
-body *{
-color: white;
+body * {
+    color: white;
 }
 
-body p{
+body p {
     display: inline-block;
     margin-top: 5em;
     font-family: sans-serif;
     font-weight: 500;
     font-size: 2em;
 }
-.selected{
-      border: 5px solid black;
-    background: white;
-}
 
-
-.a, .b, .c, .d{
-    border: 0;
+.switch {
     margin: 1rem;
     padding: 1rem;
     display: inline-block;
     height: 30px;
-    width:30px;
-
-}
-
-.not-selected{
+    width: 30px;
     border: 5px solid white;
     background: black;
-
+    position: relative;
 }
 
-
-.outer{
+.outer {
     position: absolute;
     height: 100%;
     width: 100%;
     display: table;
 }
 
-.middle{
+.middle {
     display: table-cell;
     vertical-align: middle;
 }
 
-.inner{
+.inner {
     width: 100%;
     margin: auto;
     text-align: center;
 }
 
-
-.kick h3{
+.kick h3 {
     font-family: sans-serif;
+}
+
+.switch.on {
+    border: 5px solid black;
+    background: white;
+}
+
+.switch.lit {
+    box-shadow: rgb(255, 192, 203) 0px 0px 10px 3px;
 }
