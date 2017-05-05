@@ -14,18 +14,26 @@ $('.tempo').change(function(){
 
 
       var $Kick = document.createElement('audio');
-       $Kick.setAttribute('src', 'sounds/kicks/PunchyKick_JJ.wav');
+       $Kick.setAttribute('src', 'sounds/kicks/defaultKick.wav');
 
       var $Snare = document.createElement('audio');
-       $Snare.setAttribute('src', 'sounds/snares/VerbSnClap_JJ.wav');
+       $Snare.setAttribute('src', 'sounds/snares/defaultSnare.wav');
 
        var $hat = document.createElement('audio');
-       $hat.setAttribute('src', 'sounds/hats/DirtyHihat_JJ.wav');
+       $hat.setAttribute('src', 'sounds/hats/defaultHat.wav');
 
        var $perc =  document.createElement('audio')
-       $perc.setAttribute('src', 'sounds/percs/LeBongoB_JJ.wav');
+       $perc.setAttribute('src', 'sounds/percs/defaultPerc.wav');
 
     $(".kit").change(function(){
+
+              if( $(".kit").val() == 0){
+                 $Kick.setAttribute('src', 'sounds/kicks/defaultKick.wav');
+                 $Snare.setAttribute('src', 'sounds/snares/defaultSnare.wav');
+                 $hat.setAttribute('src', 'sounds/hats/defaultHat.wav');
+                     $perc.setAttribute('src', 'sounds/percs/defaultPerc.wav');
+              console.log("african kit selected");
+            }
 
           if( $(".kit").val() == 2){
                  $Kick.setAttribute('src', 'sounds/kicks/afrKick.wav');
@@ -35,10 +43,18 @@ $('.tempo').change(function(){
               console.log("african kit selected");
             }
 
+          if( $(".kit").val() == 1){
+                 $Kick.setAttribute('src', 'sounds/kicks/TrapKick.wav');
+                 $Snare.setAttribute('src', 'sounds/snares/TrapSnare.wav');
+                 $hat.setAttribute('src', 'sounds/hats/TrapHat.wav');
+                 $perc.setAttribute('src', 'sounds/percs/TrapPerc.wav');
+              console.log("african kit selected");
+            }
+
     })
 
 
-    function entire_kick_function(){
+        function entire_kick_function(){
 
          setTimeout( function(){
             if( $('.button11').data().val == "on" ){
@@ -331,7 +347,7 @@ $('.tempo').change(function(){
     }, $tempo * 1000 * 16/4 )
 
    }
-    function entire_snare_function(){
+        function entire_snare_function(){
 
          setTimeout( function(){
             if( $('.button13').data().val == "on" ){
@@ -481,7 +497,7 @@ $('.tempo').change(function(){
 
         $snare_looper = setInterval(function(){
 
-            $tim11 = setTimeout( function(){
+          setTimeout( function(){
             if( $('.button13').data().val == "on" ){
             $Snare.currentTime = 0;
             $Snare.play();
@@ -489,7 +505,7 @@ $('.tempo').change(function(){
             }
      }, $tempo * 1000 * 1/4);
 
-           $tim12 =  setTimeout( function(){
+         setTimeout( function(){
             if($('.button23').data().val == "on" ){
             $Snare.currentTime = 0;
             $Snare.play();
@@ -497,7 +513,7 @@ $('.tempo').change(function(){
             }
      }, $tempo * 1000 * 2/4);
 
-          $tim13 =  setTimeout( function(){
+          setTimeout( function(){
 
          if($('.button33').data().val == "on"){
             $Snare.currentTime = 0;
@@ -507,7 +523,7 @@ $('.tempo').change(function(){
          }
      }, $tempo * 1000 * 3/4);
 
-          $tim14 =  setTimeout( function(){
+      setTimeout( function(){
          if($('.button43').data().val == "on"){
             $Snare.currentTime = 0;
             $Snare.play();
@@ -516,7 +532,7 @@ $('.tempo').change(function(){
          }
      }, $tempo * 1000 * 4/4);
 
-          $tim15 =  setTimeout( function(){
+           setTimeout( function(){
          if( $('.button53').data().val == "on"){
             $Snare.currentTime = 0;
             $Snare.play();
@@ -525,7 +541,7 @@ $('.tempo').change(function(){
          }
      }, $tempo * 1000 * 5/4);
 
-          $tim16 =  setTimeout( function(){
+          setTimeout( function(){
          if($('.button63').data().val == "on"){
             $Snare.currentTime = 0;
             $Snare.play();
@@ -534,7 +550,7 @@ $('.tempo').change(function(){
          }
      }, $tempo * 1000 * 6/4);
 
-          $tim17 =  setTimeout( function(){
+         setTimeout( function(){
          if($('.button73').data().val == "on"){
             $Snare.currentTime = 0;
             $Snare.play();
@@ -543,7 +559,7 @@ $('.tempo').change(function(){
          }
      }, $tempo * 1000 * 7/4);
 
-          $tim18 =  setTimeout( function(){
+        setTimeout( function(){
          if($('.button83').data().val == "on"){
             $Snare.currentTime = 0;
             $Snare.play();
@@ -552,7 +568,7 @@ $('.tempo').change(function(){
          }
      }, $tempo * 1000 * 8/4);
 
-          $tim19 =  setTimeout( function(){
+         setTimeout( function(){
          if($('.button93').data().val == "on"){
             $Snare.currentTime = 0;
             $Snare.play();
@@ -561,7 +577,7 @@ $('.tempo').change(function(){
          }
      }, $tempo * 1000 * 9/4);
 
-          $tim20 =  setTimeout( function(){
+           setTimeout( function(){
          if($('.button103').data().val == "on"){
             $Snare.currentTime = 0;
             $Snare.play();
@@ -570,7 +586,7 @@ $('.tempo').change(function(){
          }
      }, $tempo * 1000 * 10/4);
 
-          $tim21 =  setTimeout( function(){
+           setTimeout( function(){
          if($('.button113').data().val == "on"  ){
             $Snare.currentTime = 0;
             $Snare.play();
@@ -579,7 +595,7 @@ $('.tempo').change(function(){
          }
      }, $tempo * 1000 * 11/4);
 
-          $tim22 =  setTimeout( function(){
+           setTimeout( function(){
          if($('.button123').data().val == "on" ){
             $Snare.currentTime = 0;
             $Snare.play();
@@ -588,7 +604,7 @@ $('.tempo').change(function(){
          }
      }, $tempo * 1000 * 12/4);
 
-          $tim23 =  setTimeout( function(){
+          setTimeout( function(){
          if($('.button133').data().val == "on"){
             $Snare.currentTime = 0;
             $Snare.play();
@@ -597,7 +613,7 @@ $('.tempo').change(function(){
          }
      }, $tempo * 1000 * 13/4);
 
-          $tim24 =  setTimeout( function(){
+         setTimeout( function(){
         if($('.button143').data().val == "on"){
             $Snare.currentTime = 0;
             $Snare.play();
@@ -606,7 +622,7 @@ $('.tempo').change(function(){
          }
      }, $tempo * 1000 * 14/4);
 
-          $tim25 =  setTimeout( function(){
+       setTimeout( function(){
       if($('.button153').data().val == "on"  ){
             $Snare.currentTime = 0;
             $Snare.play();
@@ -616,7 +632,7 @@ $('.tempo').change(function(){
 
      }, $tempo * 1000 * 15/4);
 
-        $tim26 =  setTimeout( function(){
+     setTimeout( function(){
       if($('.button163').data().val == "on"){
             $Snare.currentTime = 0;
             $Snare.play();
@@ -628,297 +644,16 @@ $('.tempo').change(function(){
     },  $tempo * 1000 * 16/4);
 
     }
-    function entire_perc_function(){
+        function entire_hat_function(){
 
-          $tim14 =  setTimeout( function(){
-            if( $('.button14').data().val == "on" ){
-            $perc.currentTime = 0;
-            $perc.play();
-            }
-     }, $tempo * 1000 * 1/4);
-
-          $tim24 =  setTimeout( function(){
-            if( $('.button24').data().val == "on" ){
-            $perc.currentTime = 0;
-            $perc.play();
-
-            }
-     }, $tempo * 1000 * 2/4);
-
-          $tim34 =  setTimeout( function(){
-
-         if($('.button34').data().val == "on" ){
-            $perc.currentTime = 0;
-            $perc.play();
-
-
-         }
-     }, $tempo * 1000 * 3/4);
-
-          $tim4 =  setTimeout( function(){
-         if( $('.button44').data().val == "on" ){
-            $perc.currentTime = 0;
-            $perc.play();
-
-
-         }
-     }, $tempo * 1000 * 4/4);
-
-          $tim5 =  setTimeout( function(){
-         if($('.button54').data().val == "on" ){
-            $perc.currentTime = 0;
-            $perc.play();
-
-
-         }
-     }, $tempo * 1000 * 5/4);
-
-          $tim6 =  setTimeout( function(){
-         if($('.button64').data().val == "on" ){
-            $perc.currentTime = 0;
-            $perc.play();
-
-
-         }
-     }, $tempo * 1000 * 6/4);
-
-          $tim7 =  setTimeout( function(){
-         if( $('.button74').data().val == "on" ){
-            $perc.currentTime = 0;
-            $perc.play();
-
-
-         }
-     }, $tempo * 1000 * 7/4);
-
-          $tim8 =  setTimeout( function(){
-         if($('.button84').data().val == "on" ){
-            $perc.currentTime = 0;
-            $perc.play();
-
-
-         }
-     }, $tempo * 1000 * 8/4);
-
-          $tim9 =  setTimeout( function(){
-         if( $('.button94').data().val == "on"){
-            $perc.currentTime = 0;
-            $perc.play();
-
-         }
-     }, $tempo * 1000 * 9/4);
-
-          $tim10 =  setTimeout( function(){
-         if($('.button104').data().val == "on"   ){
-            $perc.currentTime = 0;
-            $perc.play();
-
-
-         }
-     }, $tempo * 1000 * 10/4);
-
-          $tim11 =  setTimeout( function(){
-         if($('.button114').data().val == "on" ){
-            $perc.currentTime = 0;
-            $perc.play();
-
-
-         }
-     }, $tempo * 1000 * 11/4);
-
-          $tim12 =  setTimeout( function(){
-         if( $('.button124').data().val == "on"){
-            $perc.currentTime = 0;
-            $perc.play();
-
-         }
-     }, $tempo * 1000 * 12/4);
-
-          $tim13 =  setTimeout( function(){
-         if( $('.button134').data().val == "on" ){
-            $perc.currentTime = 0;
-            $perc.play();
-
-         }
-     }, $tempo * 1000 * 13/4);
-
-          $tim14 =  setTimeout( function(){
-        if($('.button144').data().val == "on" ){
-            $perc.currentTime = 0;
-            $perc.play();
-
-
-         }
-     }, $tempo * 1000 * 14/4);
-
-          $tim15 =  setTimeout( function(){
-      if( $('.button154').data().val == "on" ){
-            $perc.currentTime = 0;
-            $perc.play();
-
-         }
-     }, $tempo * 1000 * 15/4);
-
-          $tim16 =  setTimeout( function(){
-      if( $('.button164').data().val == "on" ){
-            $perc.currentTime = 0;
-            $perc.play();
-
-         }
-     }, $tempo * 1000 * 16/4);
-
-        $perc_looper = setInterval(function(){
-             $tim1 =  setTimeout( function(){
-            if( $('.button14').data().val == "on" ){
-            $perc.currentTime = 0;
-            $perc.play();
-
-            }
-     }, $tempo * 1000 * 1/4);
-
-          $tim2 =  setTimeout( function(){
-            if( $('.button24').data().val == "on" ){
-            $perc.currentTime = 0;
-            $perc.play();
-
-            }
-     }, $tempo * 1000 * 2/4);
-
-          $tim3 =  setTimeout( function(){
-
-         if($('.button34').data().val == "on" ){
-            $perc.currentTime = 0;
-            $perc.play();
-
-
-         }
-     }, $tempo * 1000 * 3/4);
-
-          $tim4 =  setTimeout( function(){
-         if( $('.button44').data().val == "on" ){
-            $perc.currentTime = 0;
-            $perc.play();
-
-
-         }
-     }, $tempo * 1000 * 4/4);
-
-          $tim5 =  setTimeout( function(){
-         if($('.button54').data().val == "on" ){
-            $perc.currentTime = 0;
-            $perc.play();
-
-
-         }
-     }, $tempo * 1000 * 5/4);
-
-          $tim6 =  setTimeout( function(){
-         if($('.button64').data().val == "on" ){
-            $perc.currentTime = 0;
-            $perc.play();
-
-
-         }
-     }, $tempo * 1000 * 6/4);
-
-          $tim7 =  setTimeout( function(){
-         if( $('.button74').data().val == "on" ){
-            $perc.currentTime = 0;
-            $perc.play();
-
-
-         }
-     }, $tempo * 1000 * 7/4);
-
-          $tim8 =  setTimeout( function(){
-         if($('.button84').data().val == "on" ){
-            $perc.currentTime = 0;
-            $perc.play();
-
-
-         }
-     }, $tempo * 1000 * 8/4);
-
-          $tim9 =  setTimeout( function(){
-         if( $('.button94').data().val == "on"){
-            $perc.currentTime = 0;
-            $perc.play();
-
-         }
-     }, $tempo * 1000 * 9/4);
-
-          $tim10 =  setTimeout( function(){
-         if($('.button104').data().val == "on"   ){
-            $perc.currentTime = 0;
-            $perc.play();
-
-
-         }
-     }, $tempo * 1000 * 10/4);
-
-          $tim11 =  setTimeout( function(){
-         if($('.button114').data().val == "on" ){
-            $perc.currentTime = 0;
-            $perc.play();
-
-
-         }
-     }, $tempo * 1000 * 11/4);
-
-          $tim12 =  setTimeout( function(){
-         if( $('.button124').data().val == "on"){
-            $perc.currentTime = 0;
-            $perc.play();
-
-         }
-     }, $tempo * 1000 * 12/4);
-
-          $tim13 =  setTimeout( function(){
-         if( $('.button134').data().val == "on" ){
-            $perc.currentTime = 0;
-            $perc.play();
-
-         }
-     }, $tempo * 1000 * 13/4);
-
-          $tim14 =  setTimeout( function(){
-        if($('.button144').data().val == "on" ){
-            $perc.currentTime = 0;
-            $perc.play();
-
-
-         }
-     }, $tempo * 1000 * 14/4);
-
-          $tim15 =  setTimeout( function(){
-      if( $('.button154').data().val == "on" ){
-            $perc.currentTime = 0;
-            $perc.play();
-
-         }
-     }, $tempo * 1000 * 15/4);
-
-          $tim16 =  setTimeout( function(){
-      if( $('.button164').data().val == "on" ){
-            $perc.currentTime = 0;
-            $perc.play();
-
-         }
-     }, $tempo * 1000 * 16/4);
-
-    }, $tempo * 1000 * 16/4 )
-
-   }
-    function entire_hat_function(){
-
-          $tim14 =  setTimeout( function(){
+         setTimeout( function(){
             if( $('.button12').data().val == "on" ){
             $hat.currentTime = 0;
             $hat.play();
             }
      }, $tempo * 1000 * 1/4);
 
-          $tim24 =  setTimeout( function(){
+           setTimeout( function(){
             if( $('.button22').data().val == "on" ){
             $hat.currentTime = 0;
             $hat.play();
@@ -926,7 +661,7 @@ $('.tempo').change(function(){
             }
      }, $tempo * 1000 * 2/4);
 
-          $tim34 =  setTimeout( function(){
+          setTimeout( function(){
 
          if($('.button32').data().val == "on" ){
             $hat.currentTime = 0;
@@ -936,7 +671,7 @@ $('.tempo').change(function(){
          }
      }, $tempo * 1000 * 3/4);
 
-          $tim4 =  setTimeout( function(){
+           setTimeout( function(){
          if( $('.button42').data().val == "on" ){
             $hat.currentTime = 0;
             $hat.play();
@@ -945,7 +680,7 @@ $('.tempo').change(function(){
          }
      }, $tempo * 1000 * 4/4);
 
-          $tim5 =  setTimeout( function(){
+          setTimeout( function(){
          if($('.button52').data().val == "on" ){
             $hat.currentTime = 0;
             $hat.play();
@@ -954,7 +689,7 @@ $('.tempo').change(function(){
          }
      }, $tempo * 1000 * 5/4);
 
-          $tim6 =  setTimeout( function(){
+          setTimeout( function(){
          if($('.button62').data().val == "on" ){
             $hat.currentTime = 0;
             $hat.play();
@@ -963,7 +698,7 @@ $('.tempo').change(function(){
          }
      }, $tempo * 1000 * 6/4);
 
-          $tim7 =  setTimeout( function(){
+          setTimeout( function(){
          if( $('.button72').data().val == "on" ){
             $hat.currentTime = 0;
             $hat.play();
@@ -972,7 +707,7 @@ $('.tempo').change(function(){
          }
      }, $tempo * 1000 * 7/4);
 
-          $tim8 =  setTimeout( function(){
+        setTimeout( function(){
          if($('.button82').data().val == "on" ){
             $hat.currentTime = 0;
             $hat.play();
@@ -981,7 +716,7 @@ $('.tempo').change(function(){
          }
      }, $tempo * 1000 * 8/4);
 
-          $tim9 =  setTimeout( function(){
+         setTimeout( function(){
          if( $('.button92').data().val == "on"){
             $hat.currentTime = 0;
             $hat.play();
@@ -989,7 +724,7 @@ $('.tempo').change(function(){
          }
      }, $tempo * 1000 * 9/4);
 
-          $tim10 =  setTimeout( function(){
+           setTimeout( function(){
          if($('.button102').data().val == "on"   ){
             $hat.currentTime = 0;
             $hat.play();
@@ -998,7 +733,7 @@ $('.tempo').change(function(){
          }
      }, $tempo * 1000 * 10/4);
 
-          $tim11 =  setTimeout( function(){
+        setTimeout( function(){
          if($('.button112').data().val == "on" ){
             $hat.currentTime = 0;
             $hat.play();
@@ -1007,7 +742,7 @@ $('.tempo').change(function(){
          }
      }, $tempo * 1000 * 11/4);
 
-          $tim12 =  setTimeout( function(){
+         setTimeout( function(){
          if( $('.button122').data().val == "on"){
             $hat.currentTime = 0;
             $hat.play();
@@ -1015,7 +750,7 @@ $('.tempo').change(function(){
          }
      }, $tempo * 1000 * 12/4);
 
-          $tim13 =  setTimeout( function(){
+          setTimeout( function(){
          if( $('.button132').data().val == "on" ){
             $hat.currentTime = 0;
             $hat.play();
@@ -1023,7 +758,7 @@ $('.tempo').change(function(){
          }
      }, $tempo * 1000 * 13/4);
 
-          $tim14 =  setTimeout( function(){
+           setTimeout( function(){
         if($('.button142').data().val == "on" ){
             $hat.currentTime = 0;
             $hat.play();
@@ -1032,7 +767,7 @@ $('.tempo').change(function(){
          }
      }, $tempo * 1000 * 14/4);
 
-          $tim15 =  setTimeout( function(){
+          setTimeout( function(){
       if( $('.button152').data().val == "on" ){
             $hat.currentTime = 0;
             $hat.play();
@@ -1040,7 +775,7 @@ $('.tempo').change(function(){
          }
      }, $tempo * 1000 * 15/4);
 
-          $tim16 =  setTimeout( function(){
+          setTimeout( function(){
       if( $('.button162').data().val == "on" ){
             $hat.currentTime = 0;
             $hat.play();
@@ -1049,7 +784,8 @@ $('.tempo').change(function(){
      }, $tempo * 1000 * 16/4);
 
         $hat_looper = setInterval(function(){
-             $tim1 =  setTimeout( function(){
+
+           setTimeout( function(){
             if( $('.button12').data().val == "on" ){
             $hat.currentTime = 0;
             $hat.play();
@@ -1057,7 +793,7 @@ $('.tempo').change(function(){
             }
      }, $tempo * 1000 * 1/4);
 
-          $tim2 =  setTimeout( function(){
+         setTimeout( function(){
             if( $('.button22').data().val == "on" ){
             $hat.currentTime = 0;
             $hat.play();
@@ -1065,7 +801,7 @@ $('.tempo').change(function(){
             }
      }, $tempo * 1000 * 2/4);
 
-          $tim3 =  setTimeout( function(){
+         setTimeout( function(){
 
          if($('.button32').data().val == "on" ){
             $hat.currentTime = 0;
@@ -1075,7 +811,7 @@ $('.tempo').change(function(){
          }
      }, $tempo * 1000 * 3/4);
 
-          $tim4 =  setTimeout( function(){
+          setTimeout( function(){
          if( $('.button42').data().val == "on" ){
             $hat.currentTime = 0;
             $hat.play();
@@ -1084,7 +820,7 @@ $('.tempo').change(function(){
          }
      }, $tempo * 1000 * 4/4);
 
-          $tim5 =  setTimeout( function(){
+          setTimeout( function(){
          if($('.button52').data().val == "on" ){
             $hat.currentTime = 0;
             $hat.play();
@@ -1093,7 +829,7 @@ $('.tempo').change(function(){
          }
      }, $tempo * 1000 * 5/4);
 
-          $tim6 =  setTimeout( function(){
+          setTimeout( function(){
          if($('.button62').data().val == "on" ){
             $hat.currentTime = 0;
             $hat.play();
@@ -1102,7 +838,7 @@ $('.tempo').change(function(){
          }
      }, $tempo * 1000 * 6/4);
 
-          $tim7 =  setTimeout( function(){
+          setTimeout( function(){
          if( $('.button72').data().val == "on" ){
             $hat.currentTime = 0;
             $hat.play();
@@ -1111,7 +847,7 @@ $('.tempo').change(function(){
          }
      }, $tempo * 1000 * 7/4);
 
-          $tim8 =  setTimeout( function(){
+         setTimeout( function(){
          if($('.button82').data().val == "on" ){
             $hat.currentTime = 0;
             $hat.play();
@@ -1120,7 +856,7 @@ $('.tempo').change(function(){
          }
      }, $tempo * 1000 * 8/4);
 
-          $tim9 =  setTimeout( function(){
+         setTimeout( function(){
          if( $('.button92').data().val == "on"){
             $hat.currentTime = 0;
             $hat.play();
@@ -1128,7 +864,7 @@ $('.tempo').change(function(){
          }
      }, $tempo * 1000 * 9/4);
 
-          $tim10 =  setTimeout( function(){
+        setTimeout( function(){
          if($('.button102').data().val == "on"   ){
             $hat.currentTime = 0;
             $hat.play();
@@ -1137,7 +873,7 @@ $('.tempo').change(function(){
          }
      }, $tempo * 1000 * 10/4);
 
-          $tim11 =  setTimeout( function(){
+          setTimeout( function(){
          if($('.button112').data().val == "on" ){
             $hat.currentTime = 0;
             $hat.play();
@@ -1146,7 +882,7 @@ $('.tempo').change(function(){
          }
      }, $tempo * 1000 * 11/4);
 
-          $tim12 =  setTimeout( function(){
+         setTimeout( function(){
          if( $('.button122').data().val == "on"){
             $hat.currentTime = 0;
             $hat.play();
@@ -1154,7 +890,7 @@ $('.tempo').change(function(){
          }
      }, $tempo * 1000 * 12/4);
 
-          $tim13 =  setTimeout( function(){
+         setTimeout( function(){
          if( $('.button132').data().val == "on" ){
             $hat.currentTime = 0;
             $hat.play();
@@ -1162,7 +898,7 @@ $('.tempo').change(function(){
          }
      }, $tempo * 1000 * 13/4);
 
-          $tim14 =  setTimeout( function(){
+          setTimeout( function(){
         if($('.button142').data().val == "on" ){
             $hat.currentTime = 0;
             $hat.play();
@@ -1171,7 +907,7 @@ $('.tempo').change(function(){
          }
      }, $tempo * 1000 * 14/4);
 
-          $tim15 =  setTimeout( function(){
+          setTimeout( function(){
       if( $('.button152').data().val == "on" ){
             $hat.currentTime = 0;
             $hat.play();
@@ -1179,10 +915,291 @@ $('.tempo').change(function(){
          }
      }, $tempo * 1000 * 15/4);
 
-          $tim16 =  setTimeout( function(){
+         setTimeout( function(){
       if( $('.button162').data().val == "on" ){
             $hat.currentTime = 0;
             $hat.play();
+
+         }
+     }, $tempo * 1000 * 16/4);
+
+    }, $tempo * 1000 * 16/4 )
+
+   }
+        function entire_perc_function(){
+
+          $tim14 =  setTimeout( function(){
+            if( $('.button14').data().val == "on" ){
+            $perc.currentTime = 0;
+            $perc.play();
+            }
+     }, $tempo * 1000 * 1/4);
+
+          $tim24 =  setTimeout( function(){
+            if( $('.button24').data().val == "on" ){
+            $perc.currentTime = 0;
+            $perc.play();
+
+            }
+     }, $tempo * 1000 * 2/4);
+
+          $tim34 =  setTimeout( function(){
+
+         if($('.button34').data().val == "on" ){
+            $perc.currentTime = 0;
+            $perc.play();
+
+
+         }
+     }, $tempo * 1000 * 3/4);
+
+          $tim44 =  setTimeout( function(){
+         if( $('.button44').data().val == "on" ){
+            $perc.currentTime = 0;
+            $perc.play();
+
+
+         }
+     }, $tempo * 1000 * 4/4);
+
+          $tim54 =  setTimeout( function(){
+         if($('.button54').data().val == "on" ){
+            $perc.currentTime = 0;
+            $perc.play();
+
+
+         }
+     }, $tempo * 1000 * 5/4);
+
+          $tim64 =  setTimeout( function(){
+         if($('.button64').data().val == "on" ){
+            $perc.currentTime = 0;
+            $perc.play();
+
+
+         }
+     }, $tempo * 1000 * 6/4);
+
+          $tim74 =  setTimeout( function(){
+         if( $('.button74').data().val == "on" ){
+            $perc.currentTime = 0;
+            $perc.play();
+
+
+         }
+     }, $tempo * 1000 * 7/4);
+
+          $tim84 =  setTimeout( function(){
+         if($('.button84').data().val == "on" ){
+            $perc.currentTime = 0;
+            $perc.play();
+
+
+         }
+     }, $tempo * 1000 * 8/4);
+
+          $tim94 =  setTimeout( function(){
+         if( $('.button94').data().val == "on"){
+            $perc.currentTime = 0;
+            $perc.play();
+
+         }
+     }, $tempo * 1000 * 9/4);
+
+          $tim104 =  setTimeout( function(){
+         if($('.button104').data().val == "on"   ){
+            $perc.currentTime = 0;
+            $perc.play();
+
+
+         }
+     }, $tempo * 1000 * 10/4);
+
+          $tim114 =  setTimeout( function(){
+         if($('.button114').data().val == "on" ){
+            $perc.currentTime = 0;
+            $perc.play();
+
+
+         }
+     }, $tempo * 1000 * 11/4);
+
+          $tim124 =  setTimeout( function(){
+         if( $('.button124').data().val == "on"){
+            $perc.currentTime = 0;
+            $perc.play();
+
+         }
+     }, $tempo * 1000 * 12/4);
+
+          $tim134 =  setTimeout( function(){
+         if( $('.button134').data().val == "on" ){
+            $perc.currentTime = 0;
+            $perc.play();
+
+         }
+     }, $tempo * 1000 * 13/4);
+
+          $tim144 =  setTimeout( function(){
+        if($('.button144').data().val == "on" ){
+            $perc.currentTime = 0;
+            $perc.play();
+
+
+         }
+     }, $tempo * 1000 * 14/4);
+
+          $tim154 =  setTimeout( function(){
+      if( $('.button154').data().val == "on" ){
+            $perc.currentTime = 0;
+            $perc.play();
+
+         }
+     }, $tempo * 1000 * 15/4);
+
+          $tim164 =  setTimeout( function(){
+      if( $('.button164').data().val == "on" ){
+            $perc.currentTime = 0;
+            $perc.play();
+
+         }
+     }, $tempo * 1000 * 16/4);
+
+        $perc_looper = setInterval(function(){
+             setTimeout( function(){
+            if( $('.button14').data().val == "on" ){
+            $perc.currentTime = 0;
+            $perc.play();
+
+            }
+     }, $tempo * 1000 * 1/4);
+
+         setTimeout( function(){
+            if( $('.button24').data().val == "on" ){
+            $perc.currentTime = 0;
+            $perc.play();
+
+            }
+     }, $tempo * 1000 * 2/4);
+
+          setTimeout( function(){
+
+         if($('.button34').data().val == "on" ){
+            $perc.currentTime = 0;
+            $perc.play();
+
+
+         }
+     }, $tempo * 1000 * 3/4);
+
+          setTimeout( function(){
+         if( $('.button44').data().val == "on" ){
+            $perc.currentTime = 0;
+            $perc.play();
+
+
+         }
+     }, $tempo * 1000 * 4/4);
+
+      setTimeout( function(){
+         if($('.button54').data().val == "on" ){
+            $perc.currentTime = 0;
+            $perc.play();
+
+
+         }
+     }, $tempo * 1000 * 5/4);
+
+         setTimeout( function(){
+         if($('.button64').data().val == "on" ){
+            $perc.currentTime = 0;
+            $perc.play();
+
+
+         }
+     }, $tempo * 1000 * 6/4);
+
+         setTimeout( function(){
+         if( $('.button74').data().val == "on" ){
+            $perc.currentTime = 0;
+            $perc.play();
+
+
+         }
+     }, $tempo * 1000 * 7/4);
+
+       setTimeout( function(){
+         if($('.button84').data().val == "on" ){
+            $perc.currentTime = 0;
+            $perc.play();
+
+
+         }
+     }, $tempo * 1000 * 8/4);
+
+         setTimeout( function(){
+         if( $('.button94').data().val == "on"){
+            $perc.currentTime = 0;
+            $perc.play();
+
+         }
+     }, $tempo * 1000 * 9/4);
+
+         setTimeout( function(){
+         if($('.button104').data().val == "on"   ){
+            $perc.currentTime = 0;
+            $perc.play();
+
+
+         }
+     }, $tempo * 1000 * 10/4);
+
+          setTimeout( function(){
+         if($('.button114').data().val == "on" ){
+            $perc.currentTime = 0;
+            $perc.play();
+
+
+         }
+     }, $tempo * 1000 * 11/4);
+
+        setTimeout( function(){
+         if( $('.button124').data().val == "on"){
+            $perc.currentTime = 0;
+            $perc.play();
+
+         }
+     }, $tempo * 1000 * 12/4);
+
+      setTimeout( function(){
+         if( $('.button134').data().val == "on" ){
+            $perc.currentTime = 0;
+            $perc.play();
+
+         }
+     }, $tempo * 1000 * 13/4);
+
+         setTimeout( function(){
+        if($('.button144').data().val == "on" ){
+            $perc.currentTime = 0;
+            $perc.play();
+
+
+         }
+     }, $tempo * 1000 * 14/4);
+
+         setTimeout( function(){
+      if( $('.button154').data().val == "on" ){
+            $perc.currentTime = 0;
+            $perc.play();
+
+         }
+     }, $tempo * 1000 * 15/4);
+
+        setTimeout( function(){
+      if( $('.button164').data().val == "on" ){
+            $perc.currentTime = 0;
+            $perc.play();
 
          }
      }, $tempo * 1000 * 16/4);
@@ -1199,8 +1216,6 @@ $('.tempo').change(function(){
         }else{
              $(this).data().val = "on";
         }
-
-       // console.log( $(this).data().number + " " +  $(this).data().val + " " + $(this).data().sound  );
 
          $(this).toggleClass("selected");
       $(this).toggleClass("not-selected");
