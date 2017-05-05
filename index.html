@@ -4,68 +4,132 @@
     <meta charset="UTF-8">
     <title>BeatMaker</title>
 
-<link rel="stylesheet" href="main.css">
+<link rel="stylesheet" href="assets/css/animate.css">
+<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+<link rel="stylesheet" href="assets/css/main.css">
 
 </head>
 <body>
-   <div class="outer"><div class="middle"><div class="inner">
+   <div class="outer"><div class="middle">
 
+    <div class="inner">
+    <div class="col-xs-12 col-md-12 ">
+
+         <div class="col-xs-2 col-xs-offset-8">
+           <label for="tempo">Tempo</label>
+            <input type="number" class="form-control tempo text-center" value="120">
+           <br>
+        </div>
+
+        <div class="col-xs-2 col-xs-offset-8">
+             <label for="tempo">Drum Kit</label>
+            <select class="form-control kit btn-block">
+            <option value="" class="hidden">Select Drum Kit</option>
+            <option value="0">Hip-Hop</option>
+            <option value="1">Trap</option>
+            <option value="2">African Kit</option>
+           </select>
+           <br>
+        </div>
+
+    <div class="col-xs-2 col-xs-offset-8">
+<button class="btn btn-success btn-lg btn-block playbtn">Play</button>
+        </div>
+        <div class="clearfix"></div>
 <div class="kick">
             <h3>Drums</h3>
-        <button class="btn a not-selected "  data-number = "1" data-trigger = '1000'></button>
-        <button  class="btn b not-selected "  data-number = "2" data-trigger = '1000'></button>
-        <button class="btn c not-selected " data-number = "3" data-trigger = '1000'></button>
-        <button class="btn d  not-selected " data-number = "4" data-trigger = '1000' ></button>
-        <button class="btn a not-selected "  data-number = "5" data-trigger = '1000'></button>
-        <button  class="btn b not-selected "  data-number = "6" data-trigger = '1000'></button>
-        <button class="btn c not-selected " data-number = "7" data-trigger = '1000'></button>
-        <button class="btn d  not-selected " data-number = "8" data-trigger = '1000'></button>
+        <button class="btn a not-selected button11" data-val='off' data-number = "1" data-sound = 'kick'></button>
+        <button  class="btn b not-selected button21 " data-val='off' data-number = "2" data-sound = 'kick'></button>
+        <button class="btn c not-selected button31 "  data-val='off' data-number = "3" data-sound = 'kick'></button>
+        <button class="btn d  not-selected button41 " data-val='off' data-number = "4" data-sound = 'kick' ></button>
+        <button class="btn a not-selected button51 " data-val='off' data-number = "5" data-sound = 'kick'></button>
+        <button  class="btn b not-selected button61" data-val='off' data-number = "6" data-sound = 'kick'></button>
+        <button class="btn c not-selected button71 " data-val='off' data-number = "7" data-sound = 'kick'></button>
+        <button class="btn d  not-selected button81 " data-val='off' data-number = "8" data-sound = 'kick'></button>
+        <button class="btn a not-selected button91 " data-val='off' data-number = "9" data-sound = 'kick'></button>
+        <button  class="btn b not-selected button101" data-val='off' data-number = "10" data-sound = 'kick'></button>
+        <button class="btn c not-selected button111" data-val='off' data-number = "11" data-sound = 'kick'></button>
+        <button class="btn d  not-selected button121" data-val='off' data-number = "12" data-sound = 'kick' ></button>
+        <button class="btn a not-selected button131" data-val='off' data-number = "13" data-sound = 'kick'></button>
+        <button  class="btn b not-selected button141" data-val='off' data-number = "14" data-sound = 'kick'></button>
+        <button class="btn c not-selected button151" data-val='off' data-number = "15" data-sound = 'kick'></button>
+        <button class="btn d  not-selected button161 " data-val='off' data-number = "16" data-sound = 'kick'></button>
 
 </div>
 
  <div class="hat">
             <h3>Hat</h3>
-        <button class="btn a not-selected "  data-number = "21" data-trigger = '1000'></button>
-        <button  class="btn b not-selected "  data-number = "22" data-trigger = '1000'></button>
-        <button class="btn c not-selected " data-number = "23" data-trigger = '1000'></button>
-        <button class="btn d  not-selected " data-number = "24" data-trigger = '1000' ></button>
-                <button class="btn a not-selected "  data-number = "25" data-trigger = '1000'></button>
-        <button  class="btn b not-selected "  data-number = "26" data-trigger = '1000'></button>
-        <button class="btn c not-selected " data-number = "27" data-trigger = '1000'></button>
-        <button class="btn d  not-selected " data-number = "28" data-trigger = '1000' ></button>
+        <button class="btn a not-selected button12" data-val='off' data-number = "1" data-sound = 'hat'></button>
+        <button  class="btn b not-selected button22" data-val='off' data-number = "2" data-sound = 'hat'></button>
+        <button class="btn c not-selected button32" data-val='off' data-number = "3" data-sound = 'hat'></button>
+        <button class="btn d  not-selected button42" data-val='off' data-number = "4" data-sound = 'hat' ></button>
+        <button class="btn a not-selected button52 " data-val='off'  data-number = "5" data-sound = 'hat'></button>
+        <button  class="btn b not-selected button62" data-val='off' data-number = "6" data-sound = 'hat'></button>
+        <button class="btn c not-selected button72" data-val='off' data-number = "7" data-sound = 'hat'></button>
+        <button class="btn d  not-selected button82" data-val='off' data-number = "8" data-sound = 'hat' ></button>
+         <button class="btn a not-selected button92" data-val='off'  data-number = "9" data-sound = 'hat'></button>
+        <button  class="btn b not-selected button102 "  data-val='off' data-number = "10" data-sound = 'hat'></button>
+        <button class="btn c not-selected button112 " data-val='off' data-number = "11" data-sound = 'hat'></button>
+        <button class="btn d  not-selected button122 " data-val='off' data-number = "12" data-sound = 'hat' ></button>
+        <button class="btn a not-selected button132" data-val='off' data-number = "13" data-sound = 'hat'></button>
+        <button  class="btn b not-selected button142" data-val='off' data-number = "14" data-sound = 'hat'></button>
+        <button class="btn c not-selected button152" data-val='off' data-number = "15" data-sound = 'hat'></button>
+        <button class="btn d  not-selected button162" data-val='off' data-number = "16" data-sound = 'hat'></button>
+
+
 
 </div>
 
- <div class="kick">
+ <div class="snare">
             <h3>Snare</h3>
-        <button class="btn a not-selected "  data-number = "31"></button>
-        <button  class="btn b not-selected "  data-number = "32"></button>
-        <button class="btn c not-selected " data-number = "33"></button>
-        <button class="btn d  not-selected " data-number = "34" ></button>
-                <button class="btn a not-selected "  data-number = "35"></button>
-        <button  class="btn b not-selected "  data-number = "36"></button>
-        <button class="btn c not-selected " data-number = "37"></button>
-        <button class="btn d  not-selected " data-number = "38" ></button>
+        <button class="btn a not-selected button13" data-val='off' data-number = "1" data-sound = 'snare'></button>
+        <button  class="btn b not-selected button23" data-val='off' data-number = "2"  data-sound = 'snare'></button>
+        <button class="btn c not-selected button33" data-val='off' data-number = "3"  data-sound = 'snare'></button>
+        <button class="btn d  not-selected button43" data-val='off' data-number = "4"  data-sound = 'snare' ></button>
+        <button class="btn a not-selected button53" data-val='off' data-number = "5"  data-sound = 'snare'></button>
+        <button  class="btn b not-selected button63 "  data-val='off' data-number = "6"  data-sound = 'snare'></button>
+        <button class="btn c not-selected button73" data-val='off' data-number = "7"  data-sound = 'snare'></button>
+        <button class="btn d  not-selected button83" data-val='off' data-number = "8"  data-sound = 'snare' ></button>
+         <button class="btn a not-selected button93" data-val='off' data-number = "9"  data-sound = 'snare'></button>
+        <button  class="btn b not-selected button103" data-val='off' data-number = "10"  data-sound = 'snare'></button>
+        <button class="btn c not-selected button113" data-val='off' data-number = "11"  data-sound = 'snare'></button>
+        <button class="btn d  not-selected button123 " data-val='off' data-number = "12"  data-sound = 'snare' ></button>
+        <button class="btn a not-selected button133" data-val='off' data-number = "13"  data-sound = 'snare'></button>
+        <button  class="btn b not-selected button143" data-val='off' data-number = "14"  data-sound = 'snare'></button>
+        <button class="btn c not-selected button153" data-val='off' data-number = "15"  data-sound = 'snare'></button>
+        <button class="btn d  not-selected button163 " data-val='off' data-number = "16"  data-sound = 'snare'></button>
+
 
 </div>
 
- <div class="kick">
-            <h3>Perc</h3>
-        <button class="btn a not-selected "  data-number = "41"></button>
-        <button  class="btn b not-selected "  data-number = "42"></button>
-        <button class="btn c not-selected " data-number = "43"></button>
-        <button class="btn d  not-selected " data-number = "44" ></button>
-                <button class="btn a not-selected "  data-number = "45"></button>
-        <button  class="btn b not-selected "  data-number = "46"></button>
-        <button class="btn c not-selected " data-number = "47"></button>
-        <button class="btn d  not-selected " data-number = "48" ></button>
+ <div class="perc">
+         <h3>Perc</h3>
+        <button class="btn a not-selected button14" data-val='off' data-number = "1"  data-sound = 'perc'></button>
+        <button  class="btn b not-selected button24" data-val='off' data-number = "2" data-sound = 'perc'></button>
+        <button class="btn c not-selected button34"  data-val='off' data-number = "3" data-sound = 'perc'></button>
+        <button class="btn d  not-selected button44" data-val='off' data-number = "4" data-sound = 'perc'></button>
+        <button class="btn a not-selected button54" data-val='off' data-number = "5" data-sound = 'perc'></button>
+        <button  class="btn b not-selected button64" data-val='off' data-number = "6" data-sound = 'perc'></button>
+        <button class="btn c not-selected button74 " data-val='off' data-number = "7" data-sound = 'perc'></button>
+        <button class="btn d  not-selected button84" data-val='off' data-number = "8" data-sound = 'perc' ></button>
+         <button class="btn a not-selected button94" data-val='off' data-number = "9" data-sound = 'perc'></button>
+        <button  class="btn b not-selected button104" data-val='off' data-number = "10" data-sound = 'perc'></button>
+        <button class="btn c not-selected button114" data-val='off' data-number = "11" data-sound = 'perc'></button>
+        <button class="btn d  not-selected button124" data-val='off' data-number = "12" data-sound = 'perc'></button>
+        <button class="btn a not-selected button134" data-val='off' data-number = "13" data-sound = 'perc'></button>
+        <button  class="btn b not-selected button144" data-val='off' data-number = "14" data-sound = 'perc'></button>
+        <button class="btn c not-selected button154" data-val='off' data-number = "15" data-sound = 'perc'></button>
+        <button class="btn d  not-selected button164" data-val='off' data-number = "16" data-sound = 'perc'></button>
+
 
 </div>
 
-   </div></div></div>
+       </div> </div></div></div>
 
-<script src="jquery.min.js"></script>
-<script src="main.js"></script>
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+
+<script src="assets/js/main.js"></script>
 </body>
 
 </html>

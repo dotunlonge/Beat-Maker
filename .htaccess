@@ -1,0 +1,4 @@
+Options +FollowSymlinks
+RewriteEngine On
+
+RewriteRule ^app/?$ beat-page.html [NC,L,QSA] 
